@@ -1,0 +1,28 @@
+"Games"
+{
+	"#default"
+	{
+		"Signatures"
+		{
+			"CNetworkStringTable::WriteUpdate"
+			{
+				"library"	"engine"
+				"linux"		"@_ZNK19CNetworkStringTable11WriteUpdateEP11CBaseClientR8bf_writei"
+			}
+		}
+	}
+
+	"left4dead2"
+	{
+		"Signatures"
+		{
+			"CNetworkStringTable::WriteUpdate"
+			{
+				"library"	"engine"
+				// xref to string " [%s] %d:%s "
+				// 55 8B EC 83 EC 70 A1 ? ? ? ? 33 C5 89 45 FC 8B 45 08 53 8B 5D 0C
+				"windows"	"\x55\x8B\xEC\x83\xEC\x70\xA1\x2A\x2A\x2A\x2A\x33\xC5\x89\x45\xFC\x8B\x45\x08\x53\x8B\x5D\x0C"
+			}
+		}
+	}
+}
