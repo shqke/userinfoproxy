@@ -116,6 +116,13 @@ jobs:
           ref: l4d2
           path: hl2sdk-l4d2
           
+      - name: Checking out hl2sdk-l4d
+        uses: actions/checkout@v2
+        with:
+          repository: alliedmodders/hl2sdk
+          ref: l4d
+          path: hl2sdk-l4d
+          
       - name: Checking out own repository
         uses: actions/checkout@v2
         with:
