@@ -76,7 +76,7 @@ public Extension __ext_userinfoproxy =
 #endif
 };
 
-public __ext_userinfoproxy_SetNTVOptional()
+public void __ext_userinfoproxy_SetNTVOptional()
 {
     MarkNativeAsOptional("UserInfoExt.GetOverride");
     MarkNativeAsOptional("UserInfoExt.SetOverride");

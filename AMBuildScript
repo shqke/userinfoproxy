@@ -309,8 +309,6 @@ class ExtensionConfig(object):
     ]
 
     compiler.defines += ['SOURCE_ENGINE=' + sdk.code]
-    
-    print(os.path.join(builder.currentSourcePath, 'typeinfo_dbg'));
 
     if compiler.like('msvc'):
       if compiler.version >= 1900:
