@@ -1,4 +1,4 @@
-name: build
+name: CI
 
 on:
   push:
@@ -9,6 +9,7 @@ on:
     paths-ignore:
     - LICENSE
     - README.md
+  workflow_dispatch:
   schedule:
     - cron: '30 03 01 */3 *' # Artifacts expire every 3 months
 
@@ -90,7 +91,7 @@ jobs:
             echo>>"%GITHUB_ENV%" %%a=%%b
           )
           
-      - name: Checking out SourceMod
+      - name: Getting SourceMod ${{ matrix.sm_version }}
         uses: actions/checkout@v3
         with:
           repository: alliedmodders/sourcemod
@@ -119,21 +120,21 @@ jobs:
         working-directory: ambuild
         run: python setup.py install
         
-      - name: Checking out hl2sdk-l4d2
+      - name: Getting hl2sdk-l4d2
         uses: actions/checkout@v3
         with:
           repository: alliedmodders/hl2sdk
           ref: l4d2
           path: hl2sdk-l4d2
           
-      - name: Checking out hl2sdk-l4d
+      - name: Getting hl2sdk-l4d
         uses: actions/checkout@v3
         with:
           repository: alliedmodders/hl2sdk
           ref: l4d
           path: hl2sdk-l4d
           
-      - name: Checking out own repository
+      - name: Getting own repository
         uses: actions/checkout@v3
         with:
           path: src
