@@ -6,7 +6,7 @@ Check out [include file](extra/include/userinfoproxy.inc) for available natives.
 
 Requirements
 ------
-- [SourceMod (1.8+)](https://www.sourcemod.net/)
+- [SourceMod (1.9+)](https://www.sourcemod.net/)
 
 Supported Games
 ------
